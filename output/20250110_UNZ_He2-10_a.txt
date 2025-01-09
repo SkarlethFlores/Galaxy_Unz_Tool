@@ -1,0 +1,2 @@
+Galaxy,Flux_ID,u_bs,n_bs,z_bs,u_mn,u_unc,n_mn,n_unc,z_mn,z_unc,u_50p,u_16p,u_84p,n_50p,n_16p,n_84p,z_50p,z_16p,z_84p,LinesRatiosUsed
+He2-10, 6, -3.350, 1.620, 0.750, -3.330, 0.167, 1.559, 0.300, 0.733, 0.129, -3.334, -3.168, -3.465, 1.569, 1.218, 1.901, 0.723, 0.603, 0.867,- OIII52/OIII88- NIII57/OIII88- NII122/OIII88
