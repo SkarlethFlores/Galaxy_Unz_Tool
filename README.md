@@ -1,57 +1,94 @@
-# Galazy Fine Structure fitting tool
+# Galaxy Fine Structure Fitting Tool
 
-This repository provides a tool to fit far infrared fine structure emission lines for measuring gas-phase metallicity without the effects of extinction.
+A Python tool for fitting far-infrared fine structure emission lines to measure **gas-phase metallicity** in galaxies — free from the effects of dust extinction.
 
-## Features
+---
 
-- Measuring gas-phase metallicity without the effects of extinction
-- Fit Ionization potential, Metallicity, and electron density simultaneously using bayesian inference methodology.
+## Overview
+
+This tool uses Bayesian inference to simultaneously fit:
+- **Ionization parameter** (log U)
+- **Gas-phase metallicity** (Z)
+- **Electron density** (nₑ)
+
+by modeling far-infrared fine structure emission line ratios. Because far-IR lines are unaffected by dust extinction, this approach is especially powerful for heavily obscured or high-redshift galaxies.
+
+---
+
+## Repository Structure
+
+```
+Galaxy_Unz_Tool/
+├── data/                          # Reference model grids and calibration data
+├── input/                         # Input spectra / line flux files
+├── output/                        # Fitting results
+├── Plots/                         # Output figures
+├── gism_Functions.py              # Core fitting and utility functions
+├── main-Caller.ipynb              # Main notebook to run the fitting pipeline
+├── main-He2-10-explore_results.ipynb  # Example: results exploration for He 2-10
+├── model-part-1.ipynb             # Model grid construction (Part 1)
+└── requirements.txt               # Python dependencies
+```
+
+---
 
 ## Getting Started
 
 ### Prerequisites
 
-This tool is build in Python 3.9 and the list of dependencies required to run the project are listed in the following file:
-
-- requirements.txt
+- Python 3.9+
+- Dependencies listed in `requirements.txt`
 
 ### Installation
-
-How to install and run this project locally:
 
 ```bash
 # Clone the repository
 git clone https://github.com/SkarlethFlores/Galaxy_Unz_Tool.git
 
 # Navigate to the project directory
-# In the directory that you created/cloned the repository, navigate to the repository folder.
-cd GALAXYUNZ_TOOL
+cd Galaxy_Unz_Tool
 
 # Install dependencies
-pip install requirements.txt
-
-# Run the project
-# You can tun the file: main-Caller.ipynb
-# ajust the parameter of data input
+pip install -r requirements.txt
 ```
- 
+
+> **Note:** The correct command is `pip install -r requirements.txt` (with the `-r` flag).
+
+### Usage
+
+1. Place your input line flux data in the `input/` folder.
+2. Open `main-Caller.ipynb` in Jupyter.
+3. Adjust the input parameters (source name, line fluxes, uncertainties) at the top of the notebook.
+4. Run all cells — results will be saved to `output/` and plots to `Plots/`.
+
+For an example of how to explore and interpret results, see `main-He2-10-explore_results.ipynb`.
+
+---
+
+## Features
+
+- Bayesian parameter inference (ionization potential, metallicity, electron density) from far-IR fine structure lines
+- Extinction-independent metallicity measurement
+- Modular design — core functions are in `gism_Functions.py` for easy reuse
+- Example notebook with a real galaxy (He 2-10)
+
+---
+
+## Citation / Attribution
+
+If you use this code in your research, please acknowledge it by including the following in your paper or documentation:
+
+```
+This work made use of the Galaxy Fine Structure Fitting Tool developed by Skarleth Motiño Flores,
+available at https://github.com/SkarlethFlores/Galaxy_Unz_Tool.
+```
+
+---
 
 ## License
 
-This project is licensed under the [Apache License 2.0](LICENSE). See the `LICENSE` file for details.
+This project is licensed under the [Apache License 2.0](LICENSE). You are free to use, modify, and distribute this code with proper attribution.
 
-### Attribution
+---
 
-If you use this code in your project, **you must provide proper attribution** by:
-
-- Including the following acknowledgment in your project:
-  ```
-  This project uses code developed by Skarleth Motiño Flores, available at https://github.com/SkarlethFlores/Galaxy_Unz_Tool.git.
-  ```
-
-- Mentioning the authorship in any documentation, publication, credits, or significant communications regarding the use of this code.
-
-
---
-
-Thank you for using and contributing to this project!
+*Developed by [Skarleth Motiño Flores](https://github.com/SkarlethFlores)*
