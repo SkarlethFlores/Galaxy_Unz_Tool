@@ -1,0 +1,7 @@
+﻿id,Galaxy,date,OIII52,OIII52_unc,OIII52_inst,OIII88,OIII88_unc,OIII88_inst,NIII57,NIII57_unc,NIII57_inst,NII122,NII122_unc,NII122_inst,reference,comment
+6,Haro 3,30-Nov,26.37,1.1,FIFI,26.7,0.01,PACS,2.05,0.03,PACS,0.26,0.01,PACS,Flux Results (Current)/149,
+7,Haro 10,30-Nov,86.373,2.14,FIFI,109.918,0.031,PACS,17.857,1.295,FIFI,0.747,0.005,PACS,Flux Results (Current)/161,
+8,He 2-10,30-Nov,40.801,2.056,FIFI,54.15,0.55,AVG,15.324,0.089,PACS,3.198,0.01,PACS,Flux Results (Current)/137,
+9,Haro 3,15-Dec,26.524,1.039,FIFI,26.704,0.027,PACS,2.048,0.028,PACS,0.259,0.01,PACS,Flux Results (Current)/189,Updated Errors & trimmed less some FIFI files
+10,Haro 10,15-Dec,85.517,1.495,FIFI,109.918,0.157,PACS,6,2,FIFI,0.747,0.005,PACS,Flux Results (Current)/177,
+11,He 2-10,15-Dec,40.702,2.047,FIFI,52.07,0.47,AVG,15.324,0.08,PACS,3.198,0.01,PACS,Flux Results (Current)/204,
